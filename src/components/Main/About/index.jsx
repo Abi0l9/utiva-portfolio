@@ -5,8 +5,8 @@ import Highlight from "../../Highlight";
 
 const About = () => {
   return (
-    <div className="md:w-3/4 mx-auto snap-mandatory snap-x">
-      <SectionWrapper className="snap-center">
+    <SectionWrapper className="">
+      <div className="md:w-3/4 flex flex-col h-full justify-center items-center">
         <CustomParagraph>
           With an harmonious blend of
           <Highlight>frontend</Highlight>
@@ -33,9 +33,8 @@ const About = () => {
           constantly enhancing my skills to deliver impactful digital solutions.{" "}
           {/* <ReadMoreBox onClick={toggleReadMore}>read less</ReadMoreBox> */}
         </CustomParagraph>
-        <div className=" border-b-2 text-2xl md:ml-3 w-[110px]"></div>
-      </SectionWrapper>
-    </div>
+      </div>
+    </SectionWrapper>
   );
 };
 

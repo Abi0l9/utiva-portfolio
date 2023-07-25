@@ -5,7 +5,7 @@ import Footer from "./Footer";
 
 const Layout = () => {
   return (
-    <div className="bg-gray-800 text-gray-300 w-full px-3 h-screen overflow-y-scroll">
+    <div className="bg-gray-800 text-gray-300 w-full">
       <Header />
       <Main />
       <Footer />

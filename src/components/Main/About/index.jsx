@@ -6,7 +6,7 @@ import Highlight from "../../Highlight";
 const About = () => {
   return (
     <SectionWrapper className="">
-      <div className="md:w-3/4 flex flex-col h-full justify-center items-center">
+      <div className="md:w-3/4 flex flex-col  h-full justify-center items-center">
         <CustomParagraph>
           With an harmonious blend of
           <Highlight>frontend</Highlight>

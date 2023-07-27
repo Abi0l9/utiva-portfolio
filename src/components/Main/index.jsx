@@ -7,7 +7,7 @@ import Contact from "./Contact";
 
 const Main = () => {
   return (
-    <div>
+    <div className="">
       <Intro />
       <About />
       <Skills />

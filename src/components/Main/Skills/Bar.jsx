@@ -19,10 +19,12 @@ const Progress = ({ width }) => {
   );
 };
 
-const GreenBar = () => {
+const GreenBar = ({ children }) => {
   return (
     <div className={`bg-gray-600 h-[100%] w-[20px] rounded-[4px]`}>
-      <div className={`bg-green-500 h-[100%] w-full rounded-[4px]`}></div>
+      {children || (
+        <div className={`bg-green-500 h-[100%] w-full rounded-[4px]`}></div>
+      )}
     </div>
   );
 };
@@ -34,9 +36,9 @@ const Bar = ({ width }) => {
       <GreenBar />
       <GreenBar />
       <GreenBar />
-      <div className={`bg-gray-600 h-[100%] w-[20px] rounded-[4px]`}>
+      <GreenBar>
         <Progress width={width} />
-      </div>
+      </GreenBar>
     </div>
   );
 };

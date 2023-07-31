@@ -6,38 +6,38 @@ export const mySkills = [
   },
   {
     name: "CSS",
-    power: 4,
+    power: 5,
     imgSrc: require("./assets/icons/skills/css.png"),
   },
 
   {
     name: "NodeJS",
-    power: 2,
+    power: 5,
     imgSrc: require("./assets/icons/skills/node.png"),
   },
   {
     name: "ExpressJS",
-    power: 3,
+    power: 5,
     imgSrc: require("./assets/icons/skills/express.png"),
   },
   {
     name: "ReactJS",
-    power: 4,
+    power: 5,
     imgSrc: require("./assets/icons/skills/reactjs.png"),
   },
   {
     name: "VueJS",
-    power: 1,
+    power: 0,
     imgSrc: require("./assets/icons/skills/vue.png"),
   },
   {
     name: "Typescript",
-    power: 2,
+    power: 5,
     imgSrc: require("./assets/icons/skills/typescript.png"),
   },
   {
     name: "MongoDB",
-    power: 4,
+    power: 5,
     imgSrc: require("./assets/icons/skills/mongoose.png"),
   },
   {
@@ -47,17 +47,17 @@ export const mySkills = [
   },
   {
     name: "GraphQL",
-    power: 3,
+    power: 0,
     imgSrc: require("./assets/icons/skills/graphql.png"),
   },
   {
     name: "PostgreSQL",
-    power: 2,
+    power: 5,
     imgSrc: require("./assets/icons/skills/postgres.png"),
   },
   {
     name: "MySQL",
-    power: 4,
+    power: 5,
     imgSrc: require("./assets/icons/skills/mysql.png"),
   },
   {
@@ -67,7 +67,7 @@ export const mySkills = [
   },
   {
     name: "Flask",
-    power: 4,
+    power: 0,
     imgSrc: require("./assets/icons/skills/flask.png"),
   },
   {
@@ -82,7 +82,7 @@ export const mySkills = [
   },
   {
     name: "MUI",
-    power: 4,
+    power: 0,
     imgSrc: require("./assets/icons/skills/mui.png"),
   },
   {
@@ -92,12 +92,39 @@ export const mySkills = [
   },
   {
     name: "Git",
-    power: 3,
+    power: 5,
     imgSrc: require("./assets/icons/skills/git.png"),
   },
   {
     name: "CI/CD",
-    power: 3,
+    power: 0,
     imgSrc: require("./assets/icons/skills/ci-cd.png"),
+  },
+];
+
+export const worksList = [
+  {
+    name: "Connectify - Frontend",
+    tech: ["Javascript", "Redux", "GraphQL", "ReactJS", "MUI", "TailwindCSS"],
+    description: "This project was built few days ago",
+    state: "in-development",
+    repoLink: "https://github.com/Abi0l9/connectify",
+    link: "",
+  },
+  {
+    name: "Connectify - Backend",
+    tech: ["Javascript", "Express", "GraphQL"],
+    description: "This project was built few days ago",
+    state: "in-development",
+    repoLink: "https://github.com/Abi0l9/connectify-backend",
+    link: "",
+  },
+  {
+    name: "Stock Keeper",
+    tech: ["Typescript", "Redux", "REST", "MongoDB"],
+    description: "This project was built few days ago",
+    state: "in-development",
+    repoLink: "https://github.com/Abi0l9/stock-keeper",
+    link: "",
   },
 ];

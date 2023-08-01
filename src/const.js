@@ -1,3 +1,5 @@
+import { getRepoDetails } from "./services/git";
+
 export const mySkills = [
   {
     name: "HTML",
@@ -110,6 +112,9 @@ export const worksList = [
     state: "in-development",
     repoLink: "https://github.com/Abi0l9/connectify",
     link: "",
+    commits() {
+      getRepoDetails("connectify-frontend");
+    },
   },
   {
     name: "Connectify - Backend",
@@ -118,6 +123,9 @@ export const worksList = [
     state: "in-development",
     repoLink: "https://github.com/Abi0l9/connectify-backend",
     link: "",
+    commits() {
+      getRepoDetails("connectify");
+    },
   },
   {
     name: "Stock Keeper",
@@ -126,5 +134,8 @@ export const worksList = [
     state: "in-development",
     repoLink: "https://github.com/Abi0l9/stock-keeper",
     link: "",
+    commits() {
+      getRepoDetails("stock-keeper");
+    },
   },
 ];

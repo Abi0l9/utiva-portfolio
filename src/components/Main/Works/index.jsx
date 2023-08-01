@@ -81,6 +81,7 @@ const Works = () => {
                 className="bg-gray-200 min-w-1/4 md:min-w-2/4 cursor-pointer text-gray-900 text-xl text-center  py-2 px-4 rounded-lg active:bg-gray-900 active:text-white"
               >
                 {work.name}
+                <p className=""></p>
               </div>
             </Tooltip>
           ))}

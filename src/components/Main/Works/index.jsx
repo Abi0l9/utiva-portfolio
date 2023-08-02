@@ -2,12 +2,13 @@ import React, { useState } from "react";
 import SectionWrapper from "../../SectionWrapper";
 import {
   Box,
+  Button,
   Dialog,
+  DialogActions,
   DialogContent,
   DialogContentText,
   DialogTitle,
   Link,
-  Tooltip,
 } from "@mui/material";
 import { worksList } from "../../../const";
 
@@ -15,13 +16,16 @@ const Work = ({ state, content, toggler }) => {
   return (
     <Box className="">
       <Dialog open={state} onClose={toggler}>
-        <DialogTitle>Project: {content?.name}</DialogTitle>
+        <DialogTitle component={"div"} className="flex flex-row items-center">
+          <p className=" w-[130px]">Project: </p>
+          <p className="">{content?.name}</p>
+        </DialogTitle>
         <DialogContent>
           <DialogContentText
             component={"div"}
             className="flex flex-row items-center"
           >
-            <p className="font-semibold">Tech Used: </p>
+            <p className="font-semibold w-[130px]">Tech Used: </p>
             <DialogContentText
               component={"div"}
               className="flex flex-row flex-wrap"
@@ -36,18 +40,43 @@ const Work = ({ state, content, toggler }) => {
               ))}
             </DialogContentText>
           </DialogContentText>
-          <DialogContentText>
-            Description: {content.description}
+          <DialogContentText className="flex flex-row items-center">
+            <span className="font-bold min-w-[130px]">Description: </span>
+            {content.description}
           </DialogContentText>
-          <DialogContentText>status: {content.state}</DialogContentText>
-          <DialogContentText>
-            repo: <Link href={content.link}>{content.repoLink}</Link>
+          <DialogContentText className="flex flex-row items-center">
+            <span className="font-bold min-w-[130px]">status: </span>
+
+            {content.state}
           </DialogContentText>
-          <DialogContentText>
-            deployed at:{" "}
+          <DialogContentText className="flex flex-row items-center">
+            <span className="font-bold min-w-[130px]">Repo: </span>
+
+            <Link href={content.link}>{content.repoLink}</Link>
+          </DialogContentText>
+          <DialogContentText className="flex flex-row items-center">
+            <span className="font-bold min-w-[130px]">Latest commit: </span>
+            {content?.latestCommit || null}
+          </DialogContentText>
+          <DialogContentText className="flex flex-row items-center">
+            <span className="font-bold min-w-[130px]">Commit Date: </span>
+            {new Date(content?.commitDate).toLocaleDateString() || null}
+          </DialogContentText>
+          <DialogContentText className="flex flex-row items-center">
+            <span className="font-bold min-w-[130px]">Deployed at: </span>
             <Link href={content.link}>{content.link || "N/A"}</Link>
           </DialogContentText>
         </DialogContent>
+        <DialogActions>
+          <Button
+            onClick={toggler}
+            variant="outlined"
+            color="error"
+            size="small"
+          >
+            close
+          </Button>
+        </DialogActions>
       </Dialog>
     </Box>
   );
@@ -73,17 +102,25 @@ const Works = () => {
       </div>
 
       <SectionWrapper>
-        <div className="w-full md:w-3/4 flex flex-row flex-wrap gap-y-2 gap-x-2">
+        <div className="w-full flex flex-row justify-start flex-wrap gap-y-2 gap-x-2">
           {worksList?.map((work) => (
-            <Tooltip key={work.name} title={"Click for more information"}>
+            <div
+              key={work.name + "" + work.category}
+              className="w-[48%] md:w-[24%] flex flex-col p-1 border-[1px] border-gray-500 rounded-md"
+            >
+              <div
+                className="w-full h-[150px] md:h-[200px] bg-gray-500 rounded-md cursor-pointer"
+                onClick={() => handleModalContent(work)}
+              ></div>
               <div
                 onClick={() => handleModalContent(work)}
-                className="bg-gray-200 min-w-1/4 md:min-w-2/4 cursor-pointer text-gray-900 text-xl text-center  py-2 px-4 rounded-lg active:bg-gray-900 active:text-white"
+                className="text-left p-1 w-full flex flex-col cursor-pointer hover:underline "
               >
-                {work.name}
-                <p className=""></p>
+                <p className="hidden">{work.commits()}</p>
+                <p className="text-xl md:text-2xl">{work.name}</p>
+                <p className="text-sm text-gray-400">{work.category}</p>
               </div>
-            </Tooltip>
+            </div>
           ))}
         </div>
       </SectionWrapper>

@@ -106,25 +106,39 @@ export const mySkills = [
 
 export const worksList = [
   {
-    name: "Connectify - Frontend",
+    name: "Connectify",
     tech: ["Javascript", "Redux", "GraphQL", "ReactJS", "MUI", "TailwindCSS"],
     description: "This project was built few days ago",
     state: "in-development",
+    category: "Frontend",
     repoLink: "https://github.com/Abi0l9/connectify",
+    repoName: "connectify-frontend",
     link: "",
+    latestCommit: "",
+    commitDate: "",
     commits() {
-      getRepoDetails("connectify-frontend");
+      getRepoDetails("connectify-frontend").then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
     },
   },
   {
-    name: "Connectify - Backend",
+    name: "Connectify",
     tech: ["Javascript", "Express", "GraphQL"],
     description: "This project was built few days ago",
     state: "in-development",
+    category: "Backend",
     repoLink: "https://github.com/Abi0l9/connectify-backend",
+    repoName: "connectify",
     link: "",
+    latestCommit: "",
+    commitDate: "",
     commits() {
-      getRepoDetails("connectify");
+      getRepoDetails("connectify").then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
     },
   },
   {
@@ -132,10 +146,35 @@ export const worksList = [
     tech: ["Typescript", "Redux", "REST", "MongoDB"],
     description: "This project was built few days ago",
     state: "in-development",
+    category: "Frontend",
     repoLink: "https://github.com/Abi0l9/stock-keeper",
+    repoName: "stock-keeper",
     link: "",
+    latestCommit: "",
+    commitDate: "",
     commits() {
-      getRepoDetails("stock-keeper");
+      getRepoDetails("stock-keeper").then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
+    },
+  },
+  {
+    name: "Utiva Blog",
+    tech: ["Javascript", "Redux", "React Router", "TailwindCSS"],
+    description: "This project was built few days ago",
+    state: "in-development",
+    category: "Fullstack",
+    repoLink: "https://github.com/Abi0l9/stock-keeper",
+    repoName: "stock-keeper",
+    link: "",
+    latestCommit: "",
+    commitDate: "",
+    commits() {
+      getRepoDetails("stock-keeper").then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
     },
   },
 ];

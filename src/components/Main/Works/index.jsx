@@ -109,15 +109,17 @@ const Works = () => {
               className="w-[48%] md:w-[24%] flex flex-col p-1 border-[1px] border-gray-500 rounded-md"
             >
               <div
-                className="w-full h-[150px] md:h-[200px] bg-gray-500 rounded-md cursor-pointer"
+                className="w-full h-[150px] md:h-[200px] transition-all hover:-translate-y-1 hover:scale-[1.02] duration-300 bg-gray-500 rounded-md cursor-pointer"
                 onClick={() => handleModalContent(work)}
               ></div>
-              <div
-                onClick={() => handleModalContent(work)}
-                className="text-left p-1 w-full flex flex-col cursor-pointer hover:underline "
-              >
+              <div className="text-left p-1 w-full flex flex-col  ">
                 <p className="hidden">{work.commits()}</p>
-                <p className="text-xl md:text-2xl">{work.name}</p>
+                <p
+                  onClick={() => handleModalContent(work)}
+                  className="text-xl md:text-2xl cursor-pointer hover:underline"
+                >
+                  {work.name}
+                </p>
                 <p className="text-sm text-gray-400">{work.category}</p>
               </div>
             </div>

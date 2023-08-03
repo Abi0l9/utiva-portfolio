@@ -146,7 +146,7 @@ export const worksList = [
     tech: ["Typescript", "Redux", "REST", "MongoDB"],
     description: "This project was built few days ago",
     state: "in-development",
-    category: "Frontend",
+    category: "Fullstack",
     repoLink: "https://github.com/Abi0l9/stock-keeper",
     repoName: "stock-keeper",
     link: "",

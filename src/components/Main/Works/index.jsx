@@ -25,7 +25,7 @@ const Work = ({ state, content, toggler }) => {
             component={"div"}
             className="flex flex-row items-center"
           >
-            <p className="font-semibold w-[130px]">Tech Used: </p>
+            <div className="font-semibold w-[130px]">Tech Used: </div>
             <DialogContentText
               component={"div"}
               className="flex flex-row flex-wrap"

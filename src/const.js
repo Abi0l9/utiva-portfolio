@@ -125,7 +125,7 @@ export const worksList = [
   },
   {
     name: "Connectify",
-    tech: ["Javascript", "Express", "GraphQL"],
+    tech: ["NodeJS", "Express", "GraphQL", "MongoDB"],
     description: "This project was built few days ago",
     state: "in-development",
     category: "Backend",
@@ -143,10 +143,10 @@ export const worksList = [
   },
   {
     name: "Stock Keeper",
-    tech: ["Typescript", "Redux", "REST", "MongoDB"],
+    tech: ["Typescript", "Redux", "React", "MUI"],
     description: "This project was built few days ago",
     state: "in-development",
-    category: "Fullstack",
+    category: "Frontend",
     repoLink: "https://github.com/Abi0l9/stock-keeper",
     repoName: "stock-keeper",
     link: "",
@@ -161,17 +161,80 @@ export const worksList = [
   },
   {
     name: "Utiva Blog",
-    tech: ["Javascript", "Redux", "React Router", "TailwindCSS"],
+    tech: [
+      "Javascript",
+      "Redux",
+      "React Router",
+      "Express",
+      "TailwindCSS",
+      "REST",
+      "MongoDB",
+      "NodeJS",
+    ],
     description: "This project was built few days ago",
     state: "in-development",
     category: "Fullstack",
-    repoLink: "https://github.com/Abi0l9/stock-keeper",
-    repoName: "stock-keeper",
+    repoLink: "https://github.com/Abi0l9/blog-utiva",
+    repoName: "blog-utiva",
     link: "",
     latestCommit: "",
     commitDate: "",
     commits() {
-      getRepoDetails("stock-keeper").then((data) => {
+      getRepoDetails("blog-utiva").then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
+    },
+  },
+  {
+    name: "All News",
+    tech: ["Javascript", "Redux", "React", "MUI"],
+    description: "This project was built few days ago",
+    state: "in-development",
+    category: "Frontend",
+    repoLink: "https://github.com/Abi0l9/All-News",
+    repoName: "All-News",
+    link: "",
+    latestCommit: "",
+    commitDate: "",
+    commits() {
+      getRepoDetails("All-News").then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
+    },
+  },
+  {
+    name: "Todo List API",
+    tech: ["NodeJS", "Express", "REST", "MongoDB"],
+    description: "This project was built few days ago",
+    state: "completed",
+    category: "Backend",
+    repoLink: "https://github.com/Abi0l9/Todo-List-Api",
+    repoName: "Todo-List-Api",
+    link: "",
+    latestCommit: "",
+    commitDate: "",
+    commits() {
+      getRepoDetails("Todo-List-Api").then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
+    },
+  },
+  {
+    name: "User Authentication API",
+    tech: ["NodeJS", "Express", "REST", "MongoDB"],
+    description: "This project was built few days ago",
+    state: "completed",
+    category: "Backend",
+    repoLink: "https://github.com/Abi0l9/User-Auth-Api",
+    repoName: "User-Auth-Api",
+    link: "",
+    latestCommit: "",
+    commitDate: "",
+    commits() {
+      getRepoDetails("User-Auth-Api").then((data) => {
         this.latestCommit = data?.commit?.message;
         this.commitDate = data?.commit?.author?.date;
       });

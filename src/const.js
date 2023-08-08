@@ -117,7 +117,7 @@ export const worksList = [
     latestCommit: "",
     commitDate: "",
     commits() {
-      getRepoDetails("connectify-frontend").then((data) => {
+      getRepoDetails(this.repoName).then((data) => {
         this.latestCommit = data?.commit?.message;
         this.commitDate = data?.commit?.author?.date;
       });
@@ -135,7 +135,7 @@ export const worksList = [
     latestCommit: "",
     commitDate: "",
     commits() {
-      getRepoDetails("connectify").then((data) => {
+      getRepoDetails(this.repoName).then((data) => {
         this.latestCommit = data?.commit?.message;
         this.commitDate = data?.commit?.author?.date;
       });
@@ -153,7 +153,7 @@ export const worksList = [
     latestCommit: "",
     commitDate: "",
     commits() {
-      getRepoDetails("stock-keeper").then((data) => {
+      getRepoDetails(this.repoName).then((data) => {
         this.latestCommit = data?.commit?.message;
         this.commitDate = data?.commit?.author?.date;
       });
@@ -180,7 +180,7 @@ export const worksList = [
     latestCommit: "",
     commitDate: "",
     commits() {
-      getRepoDetails("blog-utiva").then((data) => {
+      getRepoDetails(this.repoName).then((data) => {
         this.latestCommit = data?.commit?.message;
         this.commitDate = data?.commit?.author?.date;
       });
@@ -198,7 +198,7 @@ export const worksList = [
     latestCommit: "",
     commitDate: "",
     commits() {
-      getRepoDetails("All-News").then((data) => {
+      getRepoDetails(this.repoName).then((data) => {
         this.latestCommit = data?.commit?.message;
         this.commitDate = data?.commit?.author?.date;
       });
@@ -216,7 +216,7 @@ export const worksList = [
     latestCommit: "",
     commitDate: "",
     commits() {
-      getRepoDetails("Todo-List-Api").then((data) => {
+      getRepoDetails(this.repoName).then((data) => {
         this.latestCommit = data?.commit?.message;
         this.commitDate = data?.commit?.author?.date;
       });
@@ -234,7 +234,7 @@ export const worksList = [
     latestCommit: "",
     commitDate: "",
     commits() {
-      getRepoDetails("User-Auth-Api").then((data) => {
+      getRepoDetails(this.repoName).then((data) => {
         this.latestCommit = data?.commit?.message;
         this.commitDate = data?.commit?.author?.date;
       });

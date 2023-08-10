@@ -3,6 +3,7 @@ import Intro from "./Intro";
 import Skills from "./Skills";
 import Works from "./Works";
 import Contact from "./Contact";
+import { Fade } from "react-awesome-reveal";
 
 const Main = () => {
   return (
@@ -16,9 +17,11 @@ const Main = () => {
       <div className="" id="works">
         <Works />
       </div>
-      <div className="" id="contact">
-        <Contact />
-      </div>
+      <Fade>
+        <div className="" id="contact">
+          <Contact />
+        </div>
+      </Fade>
     </div>
   );
 };

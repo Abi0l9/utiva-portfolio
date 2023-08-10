@@ -29,7 +29,7 @@ const Contact = () => {
     <div>
       <SectionWrapper>
         {/* <div className="text-2xl text-center">Contact me here</div> */}
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center" id="contact">
           <form
             onSubmit={handleSubmission}
             action=""

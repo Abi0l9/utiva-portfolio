@@ -96,7 +96,7 @@ const Works = () => {
   };
 
   return (
-    <div className="">
+    <div className="" id="works">
       <div className="bg-gray-800">
         <Work state={modalState} content={modalcontent} toggler={toggleModal} />
       </div>

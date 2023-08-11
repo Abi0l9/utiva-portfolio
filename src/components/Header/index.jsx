@@ -3,10 +3,10 @@ import React from "react";
 const Header = ({ menuState, toggleMenu }) => {
   return (
     <div className="w-full flex flex-row p-3 bg-gray-600 shadow-md" id="home">
-      <div className="w-1/2 text-gray-200 text-2xl flex flex-1">
+      <div className="w-1/2 lg:w-2/3 text-gray-200 text-2xl flex flex-1">
         Al-Khalifah
       </div>
-      <div className="flex flex-row w-1/2">
+      <div className="flex flex-row w-1/2 lg:w-1/3">
         <nav className=" flex flex-row justify-between items-center w-full text-gray-400">
           <a href="#about" className="hidden md:block active:text-gray-200">
             About

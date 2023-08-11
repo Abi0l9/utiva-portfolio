@@ -35,22 +35,7 @@ const Sidebar = ({ handleMenuClick }) => {
         >
           Works
         </Link>
-        <Link
-          href="#projects"
-          className="text-gray-200 text-2xl"
-          color="inherit"
-          underline="hover"
-        >
-          Projects
-        </Link>
-        <Link
-          href="#resume"
-          className="text-gray-200 text-2xl"
-          color="inherit"
-          underline="hover"
-        >
-          Resume
-        </Link>
+
         <Link
           href="#contact"
           className="text-gray-200 text-2xl"

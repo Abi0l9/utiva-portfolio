@@ -8,7 +8,7 @@ import { mySkills } from "../../../const";
 const Skills = () => {
   return (
     <SectionWrapper>
-      <div className=" text-center">
+      <div className="snap-center  text-center">
         <p className="text-3xl">My Skills</p>
       </div>
       <SkillWrapper>

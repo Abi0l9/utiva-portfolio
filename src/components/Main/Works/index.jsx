@@ -96,7 +96,7 @@ const Works = () => {
   };
 
   return (
-    <div className="" id="works">
+    <div className="flex flex-col min-h-screen items-center w-full" id="works">
       <div className="bg-gray-800">
         <Work state={modalState} content={modalcontent} toggler={toggleModal} />
       </div>
@@ -113,9 +113,15 @@ const Works = () => {
               className="w-[48%] md:w-[24%] flex flex-col p-1 border-[1px] border-gray-500 rounded-md"
             >
               <div
-                className="w-full h-[150px] md:h-[200px] transition-all hover:-translate-y-1 hover:scale-[1.02] duration-300 bg-gray-500 rounded-md cursor-pointer"
+                className="w-full h-[150px] md:h-[200px] transition-all hover:-translate-y-1 hover:scale-[1.02] duration-300 bg-gray-500  rounded-md cursor-pointer"
                 onClick={() => handleModalContent(work)}
-              ></div>
+              >
+                <img
+                  src={work.img}
+                  alt={work.name}
+                  className="h-[100%] w-full rounded-md object-cover"
+                />
+              </div>
               <div className="text-left p-1 w-full flex flex-col  ">
                 <p className="hidden">{work.commits()}</p>
                 <p

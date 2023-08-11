@@ -8,8 +8,8 @@ import { mySkills } from "../../../const";
 const Skills = () => {
   return (
     <SectionWrapper>
-      <div className="border-b-2 md:ml-3 w-[70px]">
-        <p className="text-3xl">Skills</p>
+      <div className=" text-center">
+        <p className="text-3xl">My Skills</p>
       </div>
       <SkillWrapper>
         {mySkills.map((skill) => (

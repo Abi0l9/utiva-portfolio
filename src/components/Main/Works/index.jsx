@@ -102,6 +102,10 @@ const Works = () => {
       </div>
 
       <SectionWrapper>
+        <div className="text-gray-200 text-3xl text-center mb-8">
+          My Projects
+        </div>
+
         <div className="w-full flex flex-row justify-start flex-wrap gap-y-2 gap-x-2">
           {worksList?.map((work) => (
             <div

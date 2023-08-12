@@ -1,5 +1,6 @@
-import { Dialog, DialogContent } from "@mui/material";
+import { CircularProgress, Dialog, DialogContent } from "@mui/material";
 import React, { useState } from "react";
+import { mailer } from "../../../services/mail";
 
 const MessageSentPopUp = ({ state, email, close }) => {
   return (
@@ -27,6 +28,9 @@ const Contact = () => {
   });
   const [openPopUp, setOpenPopUp] = useState(false);
   const [email, setEmail] = useState("");
+  const [showError, setShowError] = useState(false);
+  const [btnState, setBtnState] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -37,23 +41,48 @@ const Contact = () => {
 
   const toggler = () => setOpenPopUp(!openPopUp);
 
-  const handleSubmission = (e) => {
+  const confirmData = () => {
+    // const keys = Object.keys(initialData)
+    const values = Object.values(initialData);
+    const filled = values.every((v) => v !== "");
+
+    return filled;
+  };
+
+  const handleSubmission = async (e) => {
     e.preventDefault();
     setEmail(initialData.email);
     const data = Object.keys(initialData);
-    data.forEach((k) => {
-      initialData[k] = "";
-    });
 
-    toggler();
+    const dataConfirmed = confirmData();
+
+    if (dataConfirmed) {
+      setShowError(false); //hide error
+      setLoading(true); //show loading progress
+      setBtnState(true); // disable send button
+      await mailer(initialData); //send message to me
+      setLoading(false); // on success, hide loading progress
+      toggler(); //show success popup
+      data.forEach((k) => {
+        initialData[k] = "";
+      }); //clear input fields
+      setBtnState(false); //enable send button again
+    } else {
+      setShowError(true); //show error
+    }
   };
   return (
     <div
-      className="flex flex-col mt-[100px] px-3 lg:mt-0 min-h-screen  items-center"
+      className="relative flex flex-col mt-[100px] px-3 lg:mt-0 min-h-screen  items-center"
       id="contact"
     >
       <MessageSentPopUp state={openPopUp} email={email} close={toggler} />
-      <div className="text-4xl mb-5">Let's Work For You!</div>
+      <div className="relative text-4xl mb-5">Let's Work For You!</div>
+      {showError && (
+        <div className=" bg-gray-200 text-center w-1/2 mx-auto md:w-2/4 text-red-600 font-bold rounded-md">
+          All fields are required
+        </div>
+      )}
       <form
         onSubmit={handleSubmission}
         action=""
@@ -121,6 +150,15 @@ const Contact = () => {
             />
           </div>
         </div>
+        <div className="">
+          {loading && (
+            <CircularProgress
+              sx={{ position: "absolute" }}
+              color="inherit"
+              size={"4rem"}
+            />
+          )}
+        </div>
         <div className="flex flex-row items-center w-full my-3 md:w-3/4">
           <div className="flex flex-col w-full">
             <label htmlFor="message" className="text-gray-300 text-base">
@@ -139,7 +177,10 @@ const Contact = () => {
           </div>
         </div>
         <div className="flex flex-col rounded-md w-3/4 text-center">
-          <button className="py-2 bg-gray-900 rounded-md md:w-3/4 mx-auto w-full active:bg-gray-800 hover:bg-gray-900">
+          <button
+            disabled={btnState}
+            className="py-2 bg-gray-900 cursor-pointer rounded-md md:w-3/4 mx-auto w-full active:bg-gray-800 hover:bg-gray-900"
+          >
             Send Message
           </button>
         </div>

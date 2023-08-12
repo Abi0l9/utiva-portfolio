@@ -19,7 +19,7 @@ const Main = () => {
           <About />
         </div>
       </Zoom>
-      <Zoom>
+      <Zoom duration={2000}>
         <div className="" id="skills">
           <Skills />
         </div>

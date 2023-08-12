@@ -1,4 +1,6 @@
 import React from "react";
+import { Icon } from "@iconify/react";
+import menu from "@iconify/icons-material-symbols/menu";
 
 const Header = ({ menuState, toggleMenu }) => {
   return (
@@ -27,8 +29,8 @@ const Header = ({ menuState, toggleMenu }) => {
             Contact
           </a>
         </nav>
-        <div onClick={toggleMenu} className="md:hidden float-right">
-          Menu
+        <div className="md:hidden float-right">
+          <Icon onClick={toggleMenu} icon={menu} width={32} color="white" />
         </div>
       </div>
     </div>

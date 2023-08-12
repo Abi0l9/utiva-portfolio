@@ -3,6 +3,8 @@ import Header from "./Header";
 import Main from "./Main";
 import Footer from "./Footer";
 import { Link } from "@mui/material";
+import { Icon } from "@iconify/react";
+import close from "@iconify/icons-material-symbols/close-rounded";
 
 const Sidebar = ({ handleMenuClick }) => {
   return (
@@ -45,7 +47,9 @@ const Sidebar = ({ handleMenuClick }) => {
           Contact
         </Link>
       </div>
-      <div className="float-right cursor-pointer">menu</div>
+      <div className="float-right cursor-pointer">
+        <Icon onClick={handleMenuClick} icon={close} width={32} color="white" />
+      </div>
     </div>
   );
 };

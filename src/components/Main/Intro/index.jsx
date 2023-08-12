@@ -19,7 +19,7 @@ const Intro = () => {
           className="object-cover grayscale w-96 h-auto rounded-[5px]  shadow-md"
         />
       </div>
-      <div className="flex flex-row text-4xl ">
+      <div className="flex flex-row text-4xl text-center">
         I am
         <span className="mx-2">
           <Typewriter

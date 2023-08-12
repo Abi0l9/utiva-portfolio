@@ -29,6 +29,16 @@ const Sidebar = ({ handleMenuClick }) => {
         >
           About
         </Link>
+
+        <Link
+          href="#skills"
+          className="text-gray-200 text-2xl"
+          color="inherit"
+          underline="hover"
+        >
+          Skills
+        </Link>
+
         <Link
           href="#works"
           className="text-gray-200 text-2xl"

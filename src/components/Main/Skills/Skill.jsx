@@ -4,9 +4,9 @@ import { Fade } from "react-awesome-reveal";
 
 const Skill = ({ name, imgSrc, width }) => {
   return (
-    <div className="flex flex-row justify-center md:justify-start w-2/4 md:w-1/4 gap-x-2">
+    <div className="flex flex-row justify-center md:justify-start w-2/4 md:w-1/4 gap-x-1 md:gap-x-2">
       <Fade duration={2000}>
-        <div className="mr-2">
+        <div className="">
           <img
             src={`${imgSrc}`}
             alt={`${name}`}

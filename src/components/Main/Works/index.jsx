@@ -23,7 +23,7 @@ const Work = ({ state, content, toggler }) => {
         <DialogContent>
           <DialogContentText
             component={"div"}
-            className="flex flex-row items-center"
+            className="flex flex-row items-start"
           >
             <div className="font-semibold w-[130px]">Tech Used: </div>
             <DialogContentText
@@ -40,7 +40,7 @@ const Work = ({ state, content, toggler }) => {
               ))}
             </DialogContentText>
           </DialogContentText>
-          <DialogContentText className="flex flex-row items-center">
+          <DialogContentText className="flex flex-row items-start">
             <span className="font-bold min-w-[130px]">Description: </span>
             {content.description}
           </DialogContentText>

@@ -108,7 +108,8 @@ export const worksList = [
   {
     name: "Connectify",
     tech: ["Javascript", "Redux", "GraphQL", "ReactJS", "MUI", "TailwindCSS"],
-    description: "This project was built few days ago",
+    description:
+      "Connectify is a testament to my dedication to mastering the intricacies of modern web development. It reflects my proficiency in JavaScript, Redux, GraphQL, and UI frameworks like Material-UI and Tailwind CSS, all harmonized to build an application that seamlessly merges functionality and aesthetics.",
     state: "in-development",
     category: "Frontend",
     repoLink: "https://github.com/Abi0l9/connectify",
@@ -127,7 +128,8 @@ export const worksList = [
   {
     name: "Connectify",
     tech: ["NodeJS", "Express", "GraphQL", "MongoDB"],
-    description: "This project was built few days ago",
+    description:
+      "The Connectify Backend represents my commitment to creating a cohesive and comprehensive web application. Leveraging GraphQL, I've optimized data retrieval and ensured efficient interactions between the frontend and backend. This project demonstrates my mastery of backend technologies, particularly Node.js and Express, for building scalable and performant server-side systems.",
     state: "in-development",
     category: "Backend",
     repoLink: "https://github.com/Abi0l9/connectify-backend",
@@ -146,7 +148,8 @@ export const worksList = [
   {
     name: "Stock Keeper",
     tech: ["Typescript", "Redux", "React", "MUI"],
-    description: "This project was built few days ago",
+    description:
+      "The Stock Keeper App isn't just a project; it's a practical showcase of my expertise in TypeScript, a superset of JavaScript that enhances code quality and maintainability. This app serves as a robust tool for businesses to efficiently monitor sales, purchases, and available stocks in real time. Seamlessly integrating Redux with React ensures responsive and synchronized state management.",
     state: "in-development",
     category: "Frontend",
     repoLink: "https://github.com/Abi0l9/stock-keeper",
@@ -174,7 +177,8 @@ export const worksList = [
       "MongoDB",
       "NodeJS",
     ],
-    description: "This project was built few days ago",
+    description: `The creation of the Personal Blog showcases my mastery of various technologies, from frontend to backend. The strategic use of Redux and React Router enhances user interaction, providing a smooth browsing experience. Express, along with NodeJS, demonstrates my backend capabilities, delivering data efficiently through REST APIs. 
+    By employing MongoDB, I've showcased my skill in database management, allowing seamless content storage and retrieval. The blog's sleek design, crafted with TailwindCSS, highlights my attention to detail and aesthetic sensibilities.`,
     state: "in-development",
     category: "Fullstack",
     repoLink: "https://github.com/Abi0l9/blog-utiva",
@@ -193,7 +197,8 @@ export const worksList = [
   {
     name: "All News",
     tech: ["Javascript", "Redux", "React", "MUI"],
-    description: "This project was built few days ago",
+    description:
+      "AllNews showcases my proficiency in data integration and visualization through the use of APIs. By tapping into external news sources, I've demonstrated my skills in handling asynchronous data fetching and rendering it in a user-friendly format. The project also highlights my mastery of state management through Redux, ensuring efficient data flow and seamless user interactions",
     state: "in-development",
     category: "Frontend",
     repoLink: "https://github.com/Abi0l9/All-News",
@@ -212,7 +217,8 @@ export const worksList = [
   {
     name: "Todo List API",
     tech: ["NodeJS", "Express", "REST", "MongoDB"],
-    description: "This project was built few days ago",
+    description:
+      "This project showcases my expertise in building scalable and well-structured backend solutions. By utilizing Node.js and Express, I've created an API that efficiently handles CRUD operations, allowing users to manage their tasks with ease. The integration of MongoDB ensures reliable data storage and retrieval, enhancing the overall user experience.",
     state: "completed",
     category: "Backend",
     repoLink: "https://github.com/Abi0l9/Todo-List-Api",
@@ -231,7 +237,8 @@ export const worksList = [
   {
     name: "User Authentication API",
     tech: ["NodeJS", "Express", "REST", "MongoDB"],
-    description: "This project was built few days ago",
+    description:
+      "This project highlights my proficiency in building authentication systems that prioritize user data security. By utilizing Node.js and Express, I've crafted an API that implements industry-standard authentication practices, including password hashing and token-based authorization. MongoDB integration ensures seamless user data management and retrieval.",
     state: "completed",
     category: "Backend",
     repoLink: "https://github.com/Abi0l9/User-Auth-Api",

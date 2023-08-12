@@ -13,14 +13,11 @@ const Header = ({ menuState, toggleMenu }) => {
           <a href="#about" className="hidden md:block active:text-gray-200">
             About
           </a>
+          <a href="#skills" className="hidden md:block active:text-gray-200">
+            Skills
+          </a>
           <a href="#works" className="hidden md:block active:text-gray-200">
             Works
-          </a>
-          <a href="#projects" className="hidden md:block active:text-gray-200">
-            Projects
-          </a>
-          <a href="#resume" className="hidden md:block active:text-gray-200">
-            Resume
           </a>
           <a
             href="#contact"

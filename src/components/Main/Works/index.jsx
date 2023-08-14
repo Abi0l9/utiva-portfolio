@@ -52,7 +52,7 @@ const Work = ({ state, content, toggler }) => {
           <DialogContentText className="flex flex-row items-center">
             <span className="font-bold min-w-[130px]">Repo: </span>
 
-            <Link href={content.link}>{content.repoLink}</Link>
+            <Link href={content.repoLink}>{content.repoLink}</Link>
           </DialogContentText>
           <DialogContentText className="flex flex-row items-center">
             <span className="font-bold min-w-[130px]">Latest commit: </span>

@@ -115,7 +115,7 @@ export const worksList = [
     repoLink: "https://github.com/Abi0l9/connectify",
     repoName: "connectify-frontend",
     img: require("./assets/projects/connectify.jpg"),
-    link: "",
+    link: "https://connectify-backend-7ks8.onrender.com",
     latestCommit: "",
     commitDate: "",
     commits() {
@@ -135,7 +135,7 @@ export const worksList = [
     repoLink: "https://github.com/Abi0l9/connectify-backend",
     repoName: "connectify",
     img: require("./assets/projects/connectify-backend.jpg"),
-    link: "",
+    link: "https://connectify-backend-7ks8.onrender.com",
     latestCommit: "",
     commitDate: "",
     commits() {
@@ -184,7 +184,7 @@ export const worksList = [
     repoLink: "https://github.com/Abi0l9/blog-utiva",
     repoName: "blog-utiva",
     img: require("./assets/projects/blog.jpg"),
-    link: "",
+    link: "https://al-khalifah-writes.netlify.app/",
     latestCommit: "",
     commitDate: "",
     commits() {

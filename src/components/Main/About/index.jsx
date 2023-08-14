@@ -24,7 +24,7 @@ const About = () => {
         On the <Highlight>backend</Highlight>, I excel in
         <Highlight>Node.js</Highlight>,<Highlight>Django</Highlight>,
         <Highlight>MongoDB</Highlight>, and
-        <Highlight>Relation Database Management</Highlight>
+        <Highlight> Database Management</Highlight>
         ensuring efficient data processing and seamless integration.
       </CustomParagraph>
       <CustomParagraph>

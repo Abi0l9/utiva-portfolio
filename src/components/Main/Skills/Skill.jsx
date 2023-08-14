@@ -14,7 +14,7 @@ const Skill = ({ name, imgSrc, width }) => {
           />
         </div>
       </Fade>
-      <Fade duration={4000}>
+      <Fade duration={2000}>
         <div className="flex flex-col items-start text-left">
           <p className="text-base text-left">{name}</p>
           <Bar width={width} />

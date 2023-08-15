@@ -35,7 +35,7 @@ export const mySkills = [
   {
     name: "TypeScript",
     power: 5,
-    imgSrc: require("./assets/icons/skills/typeScript.png"),
+    imgSrc: require("./assets/icons/skills/typescript.png"),
   },
   {
     name: "MongoDB",

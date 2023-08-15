@@ -10,9 +10,24 @@ const Sidebar = ({ handleMenuClick }) => {
   return (
     <div
       onClick={handleMenuClick}
-      className="bg-gray-600 w-full p-3 h-screen mx-auto text-left flex flex-row text-gray-200"
+      className="bg-gray-900 w-full  min-h-screen text-left text-gray-200"
     >
-      <div className=" flex flex-col flex-1 items-center  w-full text-xl text-gray-300">
+      <div className="flex flex-row p-3 mb-5 justify-between shadow-md bg-gray-600">
+        <div className="text-2xl flex flex-1">
+          <a href="/" className=" active:text-gray-200">
+            Al-Khalifah
+          </a>
+        </div>
+        <div className="cursor-pointer">
+          <Icon
+            onClick={handleMenuClick}
+            icon={close}
+            width={32}
+            color="white"
+          />
+        </div>
+      </div>
+      <div className=" flex flex-col justify-center text-center  w-full text-xl text-gray-300">
         <Link
           href="#home"
           className="text-gray-200 text-2xl"
@@ -57,9 +72,9 @@ const Sidebar = ({ handleMenuClick }) => {
           Contact
         </Link>
       </div>
-      <div className="float-right cursor-pointer">
+      {/* <div className="float-right cursor-pointer">
         <Icon onClick={handleMenuClick} icon={close} width={32} color="white" />
-      </div>
+      </div> */}
     </div>
   );
 };

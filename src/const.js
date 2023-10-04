@@ -114,8 +114,28 @@ export const worksList = [
     category: "Frontend",
     repoLink: "https://github.com/Abi0l9/github-user-search.git",
     repoName: "github-user-search",
-    img: require("./assets/projects/connectify.jpg"),
+    img: require("./assets/icons/skills/github.png"),
     link: "https://khalifah-github-user-search.netlify.app",
+    latestCommit: "",
+    commitDate: "",
+    commits() {
+      getRepoDetails(this.repoName).then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
+    },
+  },
+  {
+    name: "Interactive Form Card",
+    tech: ["JavaScript", "ReactJS", "TailwindCSS"],
+    description:
+      "The App isn't just any project; it's a practical showcase of my expertise in ReactJs.",
+    state: "completed",
+    category: "Frontend",
+    repoLink: "https://github.com/Abi0l9/interactive-form-card.git",
+    repoName: "interactive-form-card",
+    img: require("./assets/icons/skills/github.png"),
+    link: "https://alkhalifah-interactive-form-card.netlify.app",
     latestCommit: "",
     commitDate: "",
     commits() {

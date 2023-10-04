@@ -126,6 +126,26 @@ export const worksList = [
     },
   },
   {
+    name: "Simple Task Manager",
+    tech: ["NodeJs", "EJS", "TailwindCSS", "Express", "Mongoose"],
+    description:
+      "A Simple Task Manager App designed with NodeJs to demonstrate MVC",
+    state: "completed",
+    category: "Backend",
+    repoLink: "https://github.com/Abi0l9/task-manager.git",
+    repoName: "task-manager",
+    img: require("./assets/icons/skills/github.png"),
+    link: "https://alkhalifah-task-manager.onrender.com",
+    latestCommit: "",
+    commitDate: "",
+    commits() {
+      getRepoDetails(this.repoName).then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
+    },
+  },
+  {
     name: "Interactive Form Card",
     tech: ["JavaScript", "ReactJS", "TailwindCSS"],
     description:

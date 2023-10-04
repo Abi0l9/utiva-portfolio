@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import { Link } from "@mui/material";
 import { Icon } from "@iconify/react";
 import close from "@iconify/icons-material-symbols/close-rounded";
+import { Fade } from "react-awesome-reveal";
 
 const Sidebar = ({ handleMenuClick }) => {
   return (
@@ -18,60 +19,65 @@ const Sidebar = ({ handleMenuClick }) => {
             Al-Khalifah
           </a>
         </div>
-        <div className="cursor-pointer">
-          <Icon
-            onClick={handleMenuClick}
-            icon={close}
-            width={32}
-            color="white"
-          />
+        <Fade>
+          <div className="cursor-pointer">
+            <Icon
+              onClick={handleMenuClick}
+              icon={close}
+              width={32}
+              color="white"
+            />
+          </div>
+        </Fade>
+      </div>
+      <Fade>
+        <div className=" flex flex-col justify-center text-center  w-full text-xl text-gray-300">
+          <Link
+            href="#home"
+            className="text-gray-200 text-2xl"
+            color="inherit"
+            underline="hover"
+          >
+            Home
+          </Link>
+          <Link
+            href="#about"
+            className="text-gray-200 text-2xl"
+            color="inherit"
+            underline="hover"
+          >
+            About
+          </Link>
+
+          <Link
+            href="#skills"
+            className="text-gray-200 text-2xl"
+            color="inherit"
+            underline="hover"
+          >
+            Skills
+          </Link>
+
+          <Link
+            href="#works"
+            className="text-gray-200 text-2xl"
+            color="inherit"
+            underline="hover"
+          >
+            Works
+          </Link>
+
+          <Link
+            href="#contact"
+            className="text-gray-200 text-2xl"
+            color="inherit"
+            underline="hover"
+          >
+            Contact
+          </Link>
         </div>
-      </div>
-      <div className=" flex flex-col justify-center text-center  w-full text-xl text-gray-300">
-        <Link
-          href="#home"
-          className="text-gray-200 text-2xl"
-          color="inherit"
-          underline="hover"
-        >
-          Home
-        </Link>
-        <Link
-          href="#about"
-          className="text-gray-200 text-2xl"
-          color="inherit"
-          underline="hover"
-        >
-          About
-        </Link>
+      </Fade>
 
-        <Link
-          href="#skills"
-          className="text-gray-200 text-2xl"
-          color="inherit"
-          underline="hover"
-        >
-          Skills
-        </Link>
-
-        <Link
-          href="#works"
-          className="text-gray-200 text-2xl"
-          color="inherit"
-          underline="hover"
-        >
-          Works
-        </Link>
-
-        <Link
-          href="#contact"
-          className="text-gray-200 text-2xl"
-          color="inherit"
-          underline="hover"
-        >
-          Contact
-        </Link>
-      </div>
       {/* <div className="float-right cursor-pointer">
         <Icon onClick={handleMenuClick} icon={close} width={32} color="white" />
       </div> */}

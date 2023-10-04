@@ -146,6 +146,26 @@ export const worksList = [
     },
   },
   {
+    name: "Advice Generator",
+    tech: ["JavaScript", "ReactJS", "TailwindCSS"],
+    description:
+      "Advice Generator App uses an external API to fetch advice to users. It generate random advices to users with just a click of a button and a bookmarking feature to revisit a favourite advice.",
+    state: "in-development",
+    category: "Frontend",
+    repoLink: "https://github.com/Abi0l9/advice-generator.git",
+    repoName: "advice-generator",
+    img: require("./assets/icons/skills/github.png"),
+    link: "https://alkhalifah-advice-generator-cm.netlify.app",
+    latestCommit: "",
+    commitDate: "",
+    commits() {
+      getRepoDetails(this.repoName).then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
+    },
+  },
+  {
     name: "Connectify",
     tech: ["JavaScript", "Redux", "GraphQL", "ReactJS", "MUI", "TailwindCSS"],
     description:

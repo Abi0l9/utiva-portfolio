@@ -106,6 +106,26 @@ export const mySkills = [
 
 export const worksList = [
   {
+    name: "Github User Search",
+    tech: ["JavaScript", "ReactJS", "TailwindCSS"],
+    description:
+      "Github User Search app is one of the projects I have chosen to build to showcase my Frontend skill and the ability to integrate external APIs into my applications using libraries like ReactJS and TailwindCSS.",
+    state: "completed",
+    category: "Frontend",
+    repoLink: "https://github.com/Abi0l9/github-user-search.git",
+    repoName: "github-user-search",
+    img: require("./assets/projects/connectify.jpg"),
+    link: "https://khalifah-github-user-search.netlify.app",
+    latestCommit: "",
+    commitDate: "",
+    commits() {
+      getRepoDetails(this.repoName).then((data) => {
+        this.latestCommit = data?.commit?.message;
+        this.commitDate = data?.commit?.author?.date;
+      });
+    },
+  },
+  {
     name: "Connectify",
     tech: ["JavaScript", "Redux", "GraphQL", "ReactJS", "MUI", "TailwindCSS"],
     description:
